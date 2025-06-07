@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaMapMarkerAlt, FaTrash, FaTruck, FaClipboardCheck, FaCalendarAlt, FaCreditCard } from 'react-icons/fa'
+import { FaMapMarkerAlt, FaTrash, FaTruck, FaClipboardCheck, FaCalendarAlt, FaCreditCard, FaCheckCircle, FaExclamationTriangle } from 'react-icons/fa'
 import skip4 from './assets/4skip.jpg'
 import skip6 from './assets/6skip.jpg'
 import skip20 from './assets/20skip.jpg'
@@ -9,6 +9,7 @@ function App() {
   const [skips, setSkips] = useState([])
   const [selectedSkip, setSelectedSkip] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [showThankYou, setShowThankYou] = useState(false)
   const [filters, setFilters] = useState({
     minPrice: 0,
     maxPrice: 1500,
@@ -76,12 +77,18 @@ function App() {
         layout
       >
         <div className="relative">
-          <div className="mb-4 rounded-lg overflow-hidden h-48">
+          <div className="mb-4 rounded-lg overflow-hidden h-48 relative">
             <img 
               src={skipImage} 
               alt={`${skip.size} Yard Skip`}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
+            {!skip.allowed_on_road && (
+              <div className="absolute bottom-2 left-2 bg-black/40 text-yellow-400 text-xs px-2 py-1 rounded-md font-medium flex items-center gap-1 backdrop-blur-sm">
+                <FaExclamationTriangle className="w-3 h-3" />
+                Not Allowed On The Road
+              </div>
+            )}
           </div>
 
           <div className="flex justify-between items-start mb-4">
@@ -134,6 +141,14 @@ function App() {
         </div>
       </motion.div>
     )
+  }
+
+  const handleContinue = () => {
+    setShowThankYou(true)
+    setTimeout(() => {
+      setShowThankYou(false)
+      setSelectedSkip(null)
+    }, 3000)
   }
 
   if (loading) {
@@ -289,7 +304,10 @@ function App() {
                     <h3 className="font-semibold text-white text-lg">{selectedSkip.size} Yard Skip</h3>
                     <p className="text-sm text-gray-400">Hire Period: {selectedSkip.hire_period_days} days</p>
                   </div>
-                  <button className="bg-blue-600 text-white px-4 md:px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors whitespace-nowrap">
+                  <button 
+                    onClick={handleContinue}
+                    className="bg-blue-600 text-white px-4 md:px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors whitespace-nowrap cursor-pointer"
+                  >
                     Continue
                   </button>
                 </div>
@@ -312,6 +330,22 @@ function App() {
                 <div className="text-xs text-gray-500 italic border-t border-gray-700 pt-4">
                   <p>Imagery and information shown throughout this website may not reflect the exact shape or size specification, colours may vary, options and/or accessories may be featured at additional cost.</p>
                 </div>
+              </div>
+            </motion.div>
+          )}
+
+          {showThankYou && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="fixed inset-0 flex items-center justify-center bg-black/50 z-50"
+            >
+              <div className="bg-gray-800 rounded-xl p-8 max-w-md w-full mx-4 text-center border border-gray-700">
+                <FaCheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                <h2 className="text-2xl font-bold text-white mb-2">Thank You!</h2>
+                <p className="text-gray-300 mb-4">Thank you for your selection. We hope you'll be satisfied with our service.</p>
+                <p className="text-sm text-gray-400">Thanks for Code Challenge.</p>
               </div>
             </motion.div>
           )}
