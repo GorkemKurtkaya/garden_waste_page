@@ -151,9 +151,7 @@ function App() {
           <div className="flex items-center justify-between max-w-4xl mx-auto overflow-x-auto pb-4">
             <div className="flex items-center min-w-fit">
               <div className="flex flex-col items-center">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
-                  <FaMapMarkerAlt className="w-4 h-4 md:w-5 md:h-5" />
-                </div>
+                <FaMapMarkerAlt className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
                 <span className="text-[10px] md:text-xs text-gray-400 mt-1 md:mt-2">Postcode</span>
               </div>
               <div className="w-8 md:w-16 lg:w-24 h-0.5 bg-gray-700"></div>
@@ -161,9 +159,7 @@ function App() {
 
             <div className="flex items-center min-w-fit">
               <div className="flex flex-col items-center">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
-                  <FaTrash className="w-4 h-4 md:w-5 md:h-5" />
-                </div>
+                <FaTrash className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
                 <span className="text-[10px] md:text-xs text-gray-400 mt-1 md:mt-2">Waste Type</span>
               </div>
               <div className="w-8 md:w-16 lg:w-24 h-0.5 bg-gray-700"></div>
@@ -171,9 +167,7 @@ function App() {
 
             <div className="flex items-center min-w-fit">
               <div className="flex flex-col items-center">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-500 flex items-center justify-center text-white">
-                  <FaTruck className="w-4 h-4 md:w-5 md:h-5" />
-                </div>
+                <FaTruck className="w-4 h-4 md:w-5 md:h-5 text-blue-500" />
                 <span className="text-[10px] md:text-xs text-white mt-1 md:mt-2">Select Skip</span>
               </div>
               <div className="w-8 md:w-16 lg:w-24 h-0.5 bg-gray-700"></div>
@@ -181,9 +175,7 @@ function App() {
 
             <div className="flex items-center min-w-fit">
               <div className="flex flex-col items-center">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 flex items-center justify-center text-gray-400">
-                  <FaClipboardCheck className="w-4 h-4 md:w-5 md:h-5" />
-                </div>
+                <FaClipboardCheck className="w-4 h-4 md:w-5 md:h-5 text-gray-400" />
                 <span className="text-[10px] md:text-xs text-gray-400 mt-1 md:mt-2">Permit Check</span>
               </div>
               <div className="w-8 md:w-16 lg:w-24 h-0.5 bg-gray-700"></div>
@@ -191,9 +183,7 @@ function App() {
 
             <div className="flex items-center min-w-fit">
               <div className="flex flex-col items-center">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 flex items-center justify-center text-gray-400">
-                  <FaCalendarAlt className="w-4 h-4 md:w-5 md:h-5" />
-                </div>
+                <FaCalendarAlt className="w-4 h-4 md:w-5 md:h-5 text-gray-400" />
                 <span className="text-[10px] md:text-xs text-gray-400 mt-1 md:mt-2">Choose Date</span>
               </div>
               <div className="w-8 md:w-16 lg:w-24 h-0.5 bg-gray-700"></div>
@@ -201,9 +191,7 @@ function App() {
 
             <div className="flex items-center min-w-fit">
               <div className="flex flex-col items-center">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-700 flex items-center justify-center text-gray-400">
-                  <FaCreditCard className="w-4 h-4 md:w-5 md:h-5" />
-                </div>
+                <FaCreditCard className="w-4 h-4 md:w-5 md:h-5 text-gray-400" />
                 <span className="text-[10px] md:text-xs text-gray-400 mt-1 md:mt-2">Payment</span>
               </div>
             </div>
