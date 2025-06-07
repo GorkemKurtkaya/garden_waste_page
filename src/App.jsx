@@ -282,7 +282,7 @@ function App() {
           </div>
 
           <div className="flex-1">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-70 md:pb-0">
               {filteredSkips.map(skip => (
                 <SkipCard key={skip.id} skip={skip} />
               ))}
@@ -296,7 +296,7 @@ function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              className="fixed bottom-0 left-0 right-0 md:bottom-8 md:right-8 md:left-auto bg-gray-800 rounded-t-xl md:rounded-xl p-4 md:p-6 shadow-lg border-t md:border border-gray-700 w-full md:w-96"
+              className="fixed bottom-0 left-0 right-0 md:bottom-8 md:right-8 md:left-auto bg-gray-800 rounded-t-xl md:rounded-xl p-4 md:p-6 shadow-lg border-t md:border border-gray-700 w-full md:w-96 z-50"
             >
               <div className="space-y-4 max-w-7xl mx-auto md:max-w-none">
                 <div className="flex items-center justify-between">
