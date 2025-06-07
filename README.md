@@ -42,13 +42,13 @@ This project is a modern and user-friendly web application for skip rental servi
 
 | Main Page | Skip Selection |
 |-----------|---------------|
-| ![Main Page](screenshots/main-page.png) | ![Skip Selection](screenshots/skip-selection.png) |
+| ![image](https://github.com/user-attachments/assets/04139798-7303-4db4-a74b-b823f1509acf) |![image](https://github.com/user-attachments/assets/d9317b69-da2e-4ead-8136-48bb9c3c26f3) |
 
 ## 🚀 Installation
 
 1. Clone the project:
 ```bash
-git clone [project-url]
+git clone https://github.com/GorkemKurtkaya/garden_waste_page
 ```
 
 2. Install dependencies:
